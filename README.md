@@ -23,3 +23,24 @@ Architect x Cornish College
 - [ ] Roles
 - [ ] Events
 
+## Model 
+- [ ] User
+    + [ ] Account
+        * [ ] Name
+        * [ ] Email
+        * [ ] Avatar
+        * [ ] AvatarColor
+    + [ ] Graph
+    + [ ] Channels
+    + [ ] Rooms
+    + [ ] Departments
+- [ ] Department
+    + [ ] Timeline
+    + [ ] Channels
+    + [ ] Rooms
+
+## Tech Stack
+### Databases
+- [ ] postgres
+- [ ] LMDB
+
