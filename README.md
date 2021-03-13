@@ -2,12 +2,9 @@
 Architect x Cornish College
 
 ## Todo
-- [ ] Support authentication via Gmail
-    + [ ] Only allow @meeshbhoombah and Cornish Faculty/Staff/Students
 - [ ] Serve a browser client
     + [ ] Support Chrome, Firefox, Safari, Edge
     + [ ] Responsive - Safari/Chrome
-- [ ] Individual/Departments
 - [ ] Networked Thinking
     + [ ] Graph per Student
     + [ ] Shareable Blocks
@@ -21,7 +18,10 @@ Architect x Cornish College
     + [ ] Right-side participant display
     + [ ] Can Stream 
 - [ ] Roles
-- [ ] Events
+- [ ] Attributes
+- [ ] Individual/Departments
+- [ ] Support authentication via Gmail
+    + [ ] Only allow @meeshbhoombah and Cornish Faculty/Staff/Students
 
 ## Model 
 - [ ] User
@@ -30,7 +30,7 @@ Architect x Cornish College
         * [ ] Email
         * [ ] Avatar
         * [ ] AvatarColor
-    + [ ] Graph
+    + [ ] Timeline
     + [ ] Channels
     + [ ] Rooms
     + [ ] Departments
@@ -38,6 +38,10 @@ Architect x Cornish College
     + [ ] Timeline
     + [ ] Channels
     + [ ] Rooms
+
+### Graph
+- [ ] Ordered collection of each day as a Block
+    + [ ] All blocks added to a day
 
 ## Tech Stack
 ### Databases
