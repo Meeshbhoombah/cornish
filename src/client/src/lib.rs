@@ -8,6 +8,13 @@
 // Cornish.
 //
 
+// - Check if session pre-existing
+//  + If so, leverage session
+//  + If not, create a session with the User as Anon TODO turn into proper authentication service
+// - Extract User info from session
+//  + Leverage user info to creaate a session
+//
+
 #![allow(
     clippy::wildcard_imports,
 )]
