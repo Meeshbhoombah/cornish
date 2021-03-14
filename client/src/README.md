@@ -12,6 +12,7 @@ User can access the Cornish system.
 
 ## Settings
 User can select a theme.
+
 User can set a font.
 
 ## Navigation
