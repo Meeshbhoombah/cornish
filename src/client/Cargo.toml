@@ -1,6 +1,6 @@
 [package]
 version = "0.1.0"
-name = "cornish-browser-client"
+name = "cornish"
 repository = "https://github.com/seed-rs/seed-quickstart"
 authors = ["Rohan Mishra <rohanmishra2017@gmail.com>"]
 description = "App Description"

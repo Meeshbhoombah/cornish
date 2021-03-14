@@ -7,46 +7,47 @@
 // It is the entry-point for end-Users into the Infrastructure adapted to
 // Cornish.
 //
-
-// - Check if session pre-existing
-//  + If so, leverage session
-//  + If not, create a session with the User as Anon TODO turn into proper authentication service
-// - Extract User info from session
-//  + Leverage user info to creaate a session
+//  + [ ] Checking if a Session is pre-existing
+//      * If so, extract User info from session
+//  + [ ] Establishing a socket connection with the Main Server
+//      * If not, create a session with the User as Anon 
+//          - TODO turn into proper authentication service
+//  + [ ] Leveraging extracteed User token to download data
+//  
+//  Window system needs
+//  - User data from Storage
+//      + Are they logged in?
+//      + What is their user token?
+//      + What is the last block they received?
+//  - Information about where to post User creation
 //
 
 #![allow(
     clippy::wildcard_imports,
 )]
 
+// mod Storage;
+
 use seed::{prelude::*, *};
 
-use mod Session;
-
-enum WindowRouter<'a> {
-    Redirect(Session::User),
-    //NotFound(None()),
-    //Onboard(None),
-    //Main(None()),
+/*
+struct Client {
+    storage: Storage,
 }
 
-impl<'a> Default for WindowRouter<'a> {
-    fn default() -> Self {
-        WindowRouter::Redirect(Session::User)
+fn init(_: Url) -> Client {
+    Client {
+        storage: Storage::init(),
     }
 }
+*/
 
-enum Msg {
-    Route(),
+// fn after_mount() -> AfterMount<Client<'static>> {
 }
 
 pub fn start() {
     /*
-    App::builder(update, view)
-        .before_mount()
-        .after_mount()
-        .route(|url| Some(Msg::RouteChanged(url.try_into().ok())))
-        .sink(sink)
+    App::builder(init)
         .build_and_start();
     */
 }

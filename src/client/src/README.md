@@ -50,5 +50,11 @@ User can Go Live in a Room.
 #### Levels
 Grouped entities.
 
-
-
+// - The Last Received Block ID
+//
+// This works because Blocks are ordered by their relations, and each new Block
+// a user creates is related to the current Day Block, with each new Block
+// being added as a tail to the list of Blocks.
+//
+// This is more effective than system timestamps as they're subject to
+// randomness.
