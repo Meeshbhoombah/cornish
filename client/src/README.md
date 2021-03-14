@@ -29,18 +29,26 @@ User can create a Studio.
 
 User can access the Window Settings.
  
-### Elevator
+### Building 
 User can view information about the active Studio.
 
-User can navigate to Pinned entities.
+User can view and manage Levels.
 
 User can navigate between:
 - The active Collection
-- Live
-    + Conversations
-    + Rooms
+- Conversations
+- Rooms
 
 User can set the active Collections.
+
+User can create a Conversation.
+
+User can create a Level.
+
+User can Go Live in a Room.
+
+#### Levels
+Grouped entities.
 
 
 
