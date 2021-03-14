@@ -8,6 +8,8 @@ Du is built with the ECS model.
 - `component.rs`
 
 # Window
+User can access the Cornish system.
+
 ## Settings
 User can select a theme.
 User can set a font.
