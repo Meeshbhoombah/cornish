@@ -5,9 +5,6 @@ Architect x Cornish College
 - Du = 8000
 
 ## Todo
-- [ ] Serve a browser client
-    + [ ] Support Chrome, Firefox, Safari, Edge
-    + [ ] Responsive - Safari/Chrome
 - [ ] Networked Thinking
     + [ ] Graph per Student
     + [ ] Shareable Blocks
@@ -23,6 +20,9 @@ Architect x Cornish College
 - [ ] Roles
 - [ ] Attributes
 - [ ] Individual/Departments
+- [ ] Serve a browser client
+    + [ ] Support Chrome, Firefox, Safari, Edge
+    + [ ] Responsive - Safari/Chrome
 - [ ] Support authentication via Gmail
     + [ ] Only allow @meeshbhoombah and Cornish Faculty/Staff/Students
 

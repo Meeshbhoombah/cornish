@@ -1,4 +1,4 @@
-# Du
+# Client
 Cross-platform browser client
 
 ## Requirements
