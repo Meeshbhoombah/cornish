@@ -27,6 +27,17 @@ fn view(model: &Model) -> Node<Msg> {
     ]
 }
 
+/*
+pub fn start() {
+    App::builder(update, view)
+        .before_mount()
+        .after_mount()
+        .route(|url| Some(Msg::RouteChanged(url.try_into().ok())))
+        .sink(sink)
+        .build_and_start();
+}
+*/
+
 #[wasm_bindgen(start)]
 pub fn start() {
     // Mount the `app` to the element with the `id` "app".
