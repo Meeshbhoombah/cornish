@@ -1,6 +1,9 @@
 # Cornish College
 Architect x Cornish College
 
+## Ports
+- Du = 8000
+
 ## Todo
 - [ ] Serve a browser client
     + [ ] Support Chrome, Firefox, Safari, Edge
@@ -22,6 +25,12 @@ Architect x Cornish College
 - [ ] Individual/Departments
 - [ ] Support authentication via Gmail
     + [ ] Only allow @meeshbhoombah and Cornish Faculty/Staff/Students
+
+### Serve a Browser Client
+- Implement static file sereving with `hyper`/`hyper_static`
+
+### Networked Thinking
+- Implement input/output with Mio
 
 ## Model 
 - [ ] User
