@@ -27,6 +27,14 @@ Platform-specific tools like `ssl` and `pkg-config`:
 1. Refresh your browser and see changes.
 1. Go to step 2.
 
+### ECS
+Du is built with the ECS model.
+
+#### Stylehguide
+- `Entity.rs`
+- `component.rs`
+- `System/` (a directory)
+
 ## Deployment
 1. Run `cargo make verify` in your terminal to format and lint the code.
 1. Run `cargo make build_release`.
