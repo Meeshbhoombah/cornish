@@ -14,7 +14,7 @@ Architect x Cornish College
 - [ ] Rooms
     + [ ] Audio/Video
     + [ ] Avatar (coin or profile pic)
-    + [ ] Built in changeable text channel view w/ Aggregator default
+    + [ ] Built-in changeable text channel view w/ Aggregator default
     + [ ] Right-side participant display
     + [ ] Can Stream 
 - [ ] Roles
