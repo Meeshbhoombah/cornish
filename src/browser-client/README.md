@@ -11,7 +11,8 @@ Cross-platform browser client
        
 Platform-specific tools like `ssl` and `pkg-config`:
 - Follow recommendations in build errors
-- _Note_: Don't hesitate to write notes or a tutorial for your platform and create a PR .
+- _Note_: Don't hesitate to write notes or a tutorial for your platform and 
+  create a PR.
 
 ## Development
 1. Open a new terminal tab / window and run: `cargo make serve`
