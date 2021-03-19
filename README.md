@@ -1,9 +1,6 @@
 # Cornish College
 Architect x Cornish College
 
-## Ports
-- Du = 8000
-
 ## Todo
 - [ ] Networked Thinking
     + [ ] Graph per Student
