@@ -1,9 +1,11 @@
 # Architecture
 An overview of the Cornish x Architect System.
 
-## Onboard
+## Landing 
 ### User can navigate to cornish.app
 ### User can sign in with a cornish.edu email/Meeshbhoombah
+
+## Onboard 
 ### User can be onboarded through System customization
 - [ ] User Profile
     + [ ] Avatar
@@ -12,11 +14,19 @@ An overview of the Cornish x Architect System.
     + Light/Dark/System Preferences
 
 ## Window
-### Studio Navigation System
+### Studio Selection
 - [ ] User can navigate between their Studio/Collective Studios
 
-### Building Navigation System
+### Studio Navigation
 - [ ] User can view information about the current Studio
 - [ ] User can switch the current Timeline Frame
 - [ ] User can expand the Building Navigation System to see more information
+- [ ] User can navigate between the Timelime/Conversations/Rooms
+
+### Conversation
+
+### Function 
+#### Input
+#### Output
+### View
 
