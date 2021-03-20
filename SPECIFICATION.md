@@ -58,7 +58,7 @@ Requirements for the Cornish x Architect system.
 
 ### Function
 #### Input
-- [ ] User can input
+- [ ] User can input...
     + [ ] [Markdown](https://www.markdownguide.org/cheat-sheet/)
 - [ ] User can make Input full screen
 
