@@ -71,6 +71,7 @@ Requirements for the Cornish x Architect system.
 - [ ] User can search 
 - [ ] User can squish/scroll through blocks created in the past
 - [ ] User can get a preview of subblocks by clicking a block
+    + [ ] Show the most recent Bullet and Todo
 - [ ] User can view by Day, Week, Month, Quarter, or Year
 
 ### View
