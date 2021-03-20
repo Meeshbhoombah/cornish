@@ -69,7 +69,8 @@ Requirements for the Cornish x Architect system.
 
 #### Output
 - [ ] User can search 
-- [ ] User can scroll through blocks created in the past
+- [ ] User can squish/scroll through blocks created in the past
+- [ ] User can get a preview of subblocks by clicking a block
 - [ ] User can view by Day, Week, Month, Quarter, or Year
 
 ### View
