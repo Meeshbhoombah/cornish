@@ -1,4 +1,4 @@
-# Architecture
+# Specification 
 An overview of the Cornish x Architect System.
 
 ## Landing 
@@ -24,6 +24,14 @@ An overview of the Cornish x Architect System.
 - [ ] User can navigate between the Timelime/Conversations/Rooms
 
 ### Conversation
+- [ ] User can view an ongoing conversation (in real time)
+- [ ] User can be motified of @mentions, @everybody, and @here
+
+#### Timeline
+- [ ] User can view pinned messages
+- [ ] User can see notifications first
+
+- [ ] User can view who is currency active in a conversation
 
 ### Function 
 #### Input
