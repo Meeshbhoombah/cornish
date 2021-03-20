@@ -4,15 +4,15 @@ Requirements for the Cornish x Architect system.
 ### User can navigate to cornish.app
 
 ## Landing 
-### User can sign in with a cornish.edu email or Meeshbhoombah
+- [ ] User can sign in with a cornish.edu email or Meeshbhoombah
 
-## Onboard 
-### User can be onboarded through System customization
-- [ ] User Profile
-    + [ ] Avatar
-    + [ ] Display name
-- [ ] Theme
-    + [ ] Light/Dark/System Preferences
+## Onboard
+- [ ] User can be onboarded through System customization
+    + [ ] User Profile
+        * [ ] Avatar
+        * [ ] Display name
+    + [ ] Theme
+        * [ ] Light/Dark/System Preferences
 
 ## Window
 ### Settings
