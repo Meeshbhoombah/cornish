@@ -5,6 +5,7 @@ Postgres
 
 ```
 User {
+    id
     email
     display_name
     studios
@@ -18,7 +19,23 @@ User {
 - [ ] Get all user data
 
 ## graph
-LMDB
+IPFS dag
+
+```
+Block {
+    id
+    contents
+}
+```
+
+```
+Frame {
+    id
+    prev_frame_hash
+    created_at
+    name
+}
+```
 
 ### CREATE
 - [ ] Add a new block to a frame (default, #log)
