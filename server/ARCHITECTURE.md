@@ -1,6 +1,6 @@
 # Server Architecture
 
-## user
+## User
 Postgres
 
 ```
@@ -8,25 +8,41 @@ User {
     email
     display_name
     graph_root
-    collectives
+    studios
 }
 ```
 
-### Create
+### CREATE
 - [ ] Create a user with a Google Account
 
-### Read
+### READ 
 - [ ] Get all user data
 
 ## graph
 LMDB
 
-- [ ]
+### CREATE
+- [ ] Add a new block to a frame (default, #log)
 
-## studio
-### CRUD
-## conversation
-### CRUD
-## room
-### CRUD
+### READ
+
+## Studio
+Studio {
+    name
+    image
+    hero
+    roles
+    conversations
+    rooms
+    frames
+}
+
+### CREATE 
+- [ ] Create a new Studio
+
+### READ
+- [ ] Get all Studio data
+
+## Conversation
+## Room
 

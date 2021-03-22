@@ -54,7 +54,7 @@ Requirements for the Cornish x Architect system.
 ### Room
 - [ ] User can view a Room
 - [ ] User can join the Room's call
-- [ ] User can view the Room's Conversation
+- [ ] User can view the Room's Conversation (between Elevetor/Function)
 
 ### Function
 #### Input
@@ -69,12 +69,16 @@ Requirements for the Cornish x Architect system.
 
 #### Output
 - [ ] User can search 
+    + [ ] Filters Frames, Blocks of the Active Frame
 - [ ] User can squish/scroll through blocks created in the past
 - [ ] User can get a preview of subblocks by clicking a block
     + [ ] Show the most recent Bullet and Todo
 - [ ] User can view by Day, Week, Month, Quarter, or Year
 
 ### View
-- [ ] User can see currently selected block in Output
+- [ ] User can have tabs
+- [ ] User can group tabs
+- [ ] User can search through tabs and contents of pages (CMD+F)
+- [ ] User can see currently selected Output block1
 - [ ] User can make Viewer full screen
 
