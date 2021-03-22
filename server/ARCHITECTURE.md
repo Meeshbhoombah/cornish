@@ -1,9 +1,28 @@
 # Server Architecture
 
 ## user
-### CRUD
+Postgres
+
+```
+User {
+    email
+    display_name
+    graph_root
+    collectives
+}
+```
+
+### Create
+- [ ] Create a user with a Google Account
+
+### Read
+- [ ] Get all user data
+
 ## graph
-### CRUD
+LMDB
+
+- [ ]
+
 ## studio
 ### CRUD
 ## conversation
