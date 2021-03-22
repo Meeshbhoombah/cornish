@@ -7,7 +7,6 @@ Postgres
 User {
     email
     display_name
-    graph_root
     studios
 }
 ```
@@ -27,15 +26,23 @@ LMDB
 ### READ
 
 ## Studio
+Postgres
+
+```
 Studio {
     name
-    image
+    avatar
     hero
+    about
+
     roles
+    members
+
+    frames
     conversations
     rooms
-    frames
 }
+```
 
 ### CREATE 
 - [ ] Create a new Studio
