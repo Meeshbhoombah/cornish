@@ -11,11 +11,7 @@ User {
     studios
 }
 ```
-
-### CREATE
 - [ ] Create a user with a Google Account
-
-### READ 
 - [ ] Get all user data
 
 ## graph
@@ -37,10 +33,7 @@ Frame {
 }
 ```
 
-### CREATE
 - [ ] Add a new block to a frame (default, #log)
-
-### READ
 
 ## Studio
 Postgres
@@ -61,12 +54,15 @@ Studio {
 }
 ```
 
-### CREATE 
 - [ ] Create a new Studio
-
-### READ
 - [ ] Get all Studio data
 
 ## Conversation
+Message queue
+
 ## Room
+- [ ] MCU
+- [ ] STCP connection
+- [ ] SDP
+- [ ] STUN/TURN
 
