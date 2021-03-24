@@ -14,11 +14,13 @@ User {
 }
 ```
 - [ ] Create a user with a Google Account
-    + [ ] 
+    + During Onboard 
+- [ ] Check if a user exists
+    + On Client init
 - [ ] Get all user data
-    + [ ] Get all data at inital loaad
+    + On inital load 
 - [ ] Update user data
-    + [ ] Settings System can update `display_name`, `theme`, etc.
+    + Settings System can update `display_name`, `theme`, etc.
 
 ## graph
 Store access data in Postgres
