@@ -1,4 +1,4 @@
-# Server Architecture
+# Server Specefication
 
 ## User
 Postgres
@@ -61,7 +61,7 @@ Studio {
 Message queue
 
 ## Room
-- [ ] SFU w/ Mediasoup
+- [ ] Mesh <= 3 peers -> SFU w/ Mediasoup
 - [ ] mutated SDP
 
 
