@@ -155,7 +155,7 @@ Store Room data in Postgres
 - [ ] User can navigate between the Timelime/Conversations/Rooms
 - [ ] User can acceess the Studio settings
 
-#### Conversation
+### Conversation
 - [ ] User can view an ongoing conversation (in real time)
 - [ ] User can be notified of @mentions, @everybody, and @here
 - [ ] User can view who is currency active in a conversation
@@ -168,7 +168,7 @@ Store Room data in Postgres
 - [ ] User can see a collection of Threads
 - [ ] User can see a Timeline of the Conversation
 
-#### Room
+### Room
 - [ ] User can view a Room
 - [ ] User can join the Room's call
 - [ ] User can view the Room's Conversation (between Elevetor/Function)
