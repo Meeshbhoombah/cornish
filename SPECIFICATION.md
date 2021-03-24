@@ -33,6 +33,82 @@ Requirements for the Cornish x Architect system.
     + Can get more with audio only streaming
         * Encourage the useage of an avatar
 
+### User
+Postgres
+
+```
+User {
+    id
+    email
+    avatar_url
+    display_name
+    theme
+    studios
+}
+```
+- [ ] Create a user with a Google Account
+    + During Onboard 
+- [ ] Check if a user exists
+    + On Client init
+- [ ] Get all user data
+    + On inital load 
+- [ ] Update user data
+    + Settings System can update `display_name`, `theme`, etc.
+
+### graph
+Store access data in Postgres
+IPFS DAG
+
+```
+Block {
+    id
+    contents
+}
+```
+
+```
+Frame {
+    id
+    prev_frame_hash
+    created_at
+    name
+}
+```
+
+- [ ] Add a new block to a frame (default, #log)
+
+### Studio
+Postgres
+
+```
+Studio {
+    name
+    avatar
+    hero
+    about
+
+    roles
+    members
+
+    frames
+    conversations
+    rooms
+}
+```
+
+- [ ] Create a new Studio
+- [ ] Get all Studio data
+
+### Conversation
+Store Room data in Postgres
+Message Queue
+
+### Room
+Store Room data in Postgres
+
+- [ ] Mesh <= 3 peers -> SFU w/ Mediasoup
+- [ ] mutated SDP
+
 ## Client
 ### User can navigate to cornish.app
 
