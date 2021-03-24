@@ -7,15 +7,18 @@ Postgres
 User {
     id
     email
+    avatar_url
     display_name
     studios
 }
 ```
 - [ ] Create a user with a Google Account
 - [ ] Get all user data
+- [ ] Update user data
 
 ## graph
-IPFS dag
+Store access data in Postgres
+IPFS DAG
 
 ```
 Block {
@@ -58,9 +61,12 @@ Studio {
 - [ ] Get all Studio data
 
 ## Conversation
-Message queue
+Store Room data in Postgres
+Message Queue
 
 ## Room
+Store Room data in Postgres
+
 - [ ] Mesh <= 3 peers -> SFU w/ Mediasoup
 - [ ] mutated SDP
 
