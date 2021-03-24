@@ -9,12 +9,16 @@ User {
     email
     avatar_url
     display_name
+    theme
     studios
 }
 ```
 - [ ] Create a user with a Google Account
+    + [ ] 
 - [ ] Get all user data
+    + [ ] Get all data at inital loaad
 - [ ] Update user data
+    + [ ] Settings System can update `display_name`, `theme`, etc.
 
 ## graph
 Store access data in Postgres
