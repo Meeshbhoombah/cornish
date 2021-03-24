@@ -33,6 +33,14 @@ Requirements for the Cornish x Architect system.
     + Can get more with audio only streaming
         * Encourage the useage of an avatar
 
+- [ ] Ability to serve a webrtc connection
+    + Leverage webrtc-unreliable
+    + Build simple, scalable tester
+- [ ] Define User
+    + [ ] Transport
+    + [ ] Model
+    + [ ] Consider
+
 ### User
 Postgres
 
