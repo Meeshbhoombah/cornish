@@ -61,11 +61,7 @@ Studio {
 Message queue
 
 ## Room
-- [ ] MCU
-- [ ] STCP connection
-- [ ] ICE - establish realtime connection
-- [ ] STUN/TURN - get NAT status (public port OR means to reach port from priv)
-- [ ] SDP - exchange singaling information (to notify others of who is important
-       to connect w/)
+- [ ] SFU w/ Mediasoup
+- [ ] mutated SDP
 
 
