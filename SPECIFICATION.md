@@ -108,12 +108,11 @@ Studio {
 - [ ] Get all Studio data
 
 ### Conversation
-Store Room data in Postgres
-Message Queue
+- Store Room data in Postgres
+- RabbitMQ Message Queue
 
 ### Room
 Store Room data in Postgres
-
 - [ ] Mesh <= 3 peers -> SFU w/ Mediasoup
 - [ ] mutated SDP
 
