@@ -25,10 +25,6 @@ Requirements for the Cornish x Architect system.
 - [ ] Ability to serve a webrtc connection
     + Leverage webrtc-unreliable
     + Build simple, scalable tester
-- [ ] Define User
-    + [ ] Transport
-    + [ ] Model
-    + [ ] Consider
 
 ### user
 Postgres
