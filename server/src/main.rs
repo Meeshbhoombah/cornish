@@ -33,7 +33,7 @@ async fn main() {
         .expect("Failed to parse address.");
 
     // todo update static file path
-    let index = Static::new(Path::new("src"));
+    let index = Static::new(Path::new("."));
     let make_service = make_service_fn(|_| {
         let client_pkg = index.clone();
         future::ok::<_, hyper::Error>(service_fn(move |req| handle_request(req, client_pkg.clone())))
