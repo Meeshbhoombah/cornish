@@ -2,30 +2,19 @@
 Requirements for the Cornish x Architect system.
 
 - [ ] Networked Thinking
-    + [ ] Graph per Student
-    + [ ] Shareable Blocks
 - [ ] Text-Channel
-    + [ ] Aggregator (w/ link to channel)
-    + [ ] Thread side-view
 - [ ] Rooms
-    + [ ] Audio/Video
-    + [ ] Avatar (coin or profile pic)
-    + [ ] Built-in changeable text channel view w/ Aggregator default
-    + [ ] Can Stream 
-- [ ] Roles
 - [ ] Attributes
-- [ ] Individual/Departments
+- [ ] Roles
 - [ ] Serve a browser client
-    + [ ] Support Chrome, Firefox, Safari, Edge
-    + [ ] Responsive - Safari/Chrome
 - [ ] Support authentication via Gmail
     + [ ] Only allow @meeshbhoombah and Cornish Faculty/Staff/Students
 
 ## Server
 ### Constraints
-**Load:** ~1000 users
+~1000 users
 - Largest call size size? 
-    + Presuming ~20% of persons on video:
+    + Presuming ~20% of persons in Room streaming video:
         * Idealistic = 800
         * Optimsitic = 100
         * Realistic = 65
@@ -41,7 +30,7 @@ Requirements for the Cornish x Architect system.
     + [ ] Model
     + [ ] Consider
 
-### User
+### user
 Postgres
 
 Amazon S3 for storing profile photos
@@ -89,7 +78,7 @@ Frame {
 
 - [ ] Add a new block to a frame (default, #log)
 
-### Studio
+### studio
 Postgres
 
 ```
@@ -111,16 +100,20 @@ Studio {
 - [ ] Create a new Studio
 - [ ] Get all Studio data
 
-### Conversation
+### conversation
 - Store Room data in Postgres
 - RabbitMQ Message Queue
 
-### Room
+### room
 Store Room data in Postgres
 - [ ] Mesh <= 3 peers -> SFU w/ Mediasoup
 - [ ] mutated SDP
 
 ## Client
+### Constraints
+- [ ] Support Chrome, Firefox, Safari, Edge
+- [ ] Mobile Responsive - Safari/Chrome
+
 ### User can navigate to cornish.app
 
 ### Landing 
