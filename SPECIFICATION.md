@@ -23,8 +23,6 @@ Requirements for the Cornish x Architect system.
         * Encourage the useage of an avatar
 
 - [ ] Ability to serve a webrtc connection
-    + Leverage webrtc-unreliable
-
 
 ### user
 Postgres
