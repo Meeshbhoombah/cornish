@@ -5,4 +5,6 @@ authors = ["Rohan Mishra <rohanmishra2017@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+tokio = { version = "1", features = ["full"] }
+
 
