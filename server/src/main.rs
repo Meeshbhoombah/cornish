@@ -2,6 +2,7 @@ use std::net::SocketAddr;
 
 use tokio::net::{TcpListener, TcpStream};
 
+//const STATIC_FILES: ;
 const DEFAULT_ADDRESS: &str = "127.0.0.1:3000";
 
 async fn handle_connection(conn_stream: TcpStream, conn_addr: SocketAddr) {
