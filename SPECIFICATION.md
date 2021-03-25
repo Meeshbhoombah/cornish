@@ -44,6 +44,8 @@ Requirements for the Cornish x Architect system.
 ### User
 Postgres
 
+Amazon S3 for storing profile photos
+
 ```
 User {
     id
@@ -65,7 +67,9 @@ User {
 
 ### graph
 Store access data in Postgres
-IPFS DAG
+Image refs, accessible from S3
+
+Graph root = IPFS DAG
 
 ```
 Block {
