@@ -24,7 +24,7 @@ Requirements for the Cornish x Architect system.
 
 - [ ] Ability to serve a webrtc connection
     + Leverage webrtc-unreliable
-    + Build simple, scalable tester
+
 
 ### user
 Postgres
@@ -104,6 +104,8 @@ Studio {
 Store Room data in Postgres
 - [ ] Mesh <= 3 peers -> SFU w/ Mediasoup
 - [ ] mutated SDP
+
+Build simple, scalable tester.
 
 ## Client
 ### Constraints
