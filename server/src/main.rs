@@ -9,27 +9,30 @@ use hyper_staticfile::Static;
 
 mod routes;
 
-const CLIENT: &str = "../client/index.html";
+const CLIENT: &str = "../client/";
 const DEFAULT_ADDRESS: &str = "127.0.0.1:3000";
 
 #[tokio::main]
 async fn main() {
+    // TcpListener::bind requires a SocketAddr
     let addr: SocketAddr = DEFAULT_ADDRESS
         .parse()
-        .expect("Failed to parse address.");
+        .expect("Unable to parse address.");
 
-    let bind_socket = TcpListener::bind(&addr).await;
-    let listener = bind_socket.expect("Unable to bind to socket.");
+    let listener = TcpListener::bind(&addr).await
+        .expect("Unable to bind to provided address.");
+    
     println!("Listening at: {}", &addr);
 
     while let Ok((stream, addr)) = listener.accept().await {
-        // tokio::spawn(handle_connection(stream, addr));
+        tokio::spawn(routes::connect(stream, addr));
     }
 
     /*
     let client = Static::new(Path::new(CLIENT));
     let cornish = make_service_fn(|_| {
-        // to make a reference to client available inside of the `service_fn`
+        // make a reference to client available inside of the `service_fn`
+        // using `clone` rather than `move` to only copy the ref to `client`
         let client = client.clone();
         future::ok::<_, hyper::Error>(service_fn(move |req| routes::handle(req, client.clone())))
     });
