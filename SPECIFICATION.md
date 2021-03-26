@@ -22,7 +22,11 @@ Requirements for the Cornish x Architect system.
     + Can get more with audio only streaming
         * Encourage the useage of an avatar
 
-- [ ] Ability to serve a webrtc connection
+- [x] Create TCP Listener
+- [ ] Check if connection received is HTTP or TCP
+- [ ] If HTTP, check serve index as a response
+- [ ] If TCP, check message data to determine the type of incoming packet
+- [ ] Send a pong request to an incoming ping request
 
 ### user
 Postgres
