@@ -22,6 +22,10 @@ async fn main() {
     let listener = bind_socket.expect("Unable to bind to socket.");
     println!("Listening at: {}", &addr);
 
+    while let Ok((stream, addr)) = listener.accept().await {
+        // tokio::spawn(handle_connection(stream, addr));
+    }
+
     /*
     let client = Static::new(Path::new(CLIENT));
     let cornish = make_service_fn(|_| {
