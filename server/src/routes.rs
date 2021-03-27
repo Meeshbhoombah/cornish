@@ -26,17 +26,4 @@ pub async fn handle<B>(req: Request<B>, static_: Static) -> Result<Response<Body
             static_.serve(req).await
         }
     }
-
-    /*
-    if req.uri().path() == "/" {
-        let res = ResponseBuilder::new()
-            .status(StatusCode::MOVED_PERMANENTLY)
-            .header(header::LOCATION, "/index.html")
-            .body(Body::empty())
-            .expect("unable to build response");
-        Ok(res)
-    } else {
-        static_.serve(req).await
-    }
-    */
 }

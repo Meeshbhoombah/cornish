@@ -29,6 +29,6 @@ async fn main() {
     println!("Listening at http://{}/", &addr);
 
     if let Err(err) = server.await {
-        eprintln!("server error: {}", err);
+        eprintln!("{}", err);
     }
 }
