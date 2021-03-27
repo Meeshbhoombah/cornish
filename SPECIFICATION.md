@@ -24,8 +24,13 @@ Requirements for the Cornish x Architect system.
 
 - [x] Create TCP Listener
 - [ ] Check if connection received is HTTP or TCP
+    + Use Alice's example, except match on uri
+    + Pass raw TcpStream to tungstenite
 - [ ] If HTTP, check serve index as a response
-- [ ] If TCP, check message data to determine the type of incoming packet
+- [ ] If TCP, establish webrtc connection
+    + [ ] SDP
+    + [ ] ICE
+    + [ ] STUN/TURN
 - [ ] Send a pong request to an incoming ping request
 
 ### user

@@ -14,11 +14,11 @@ const DEFAULT_ADDRESS: &str = "127.0.0.1:3000";
 
 #[tokio::main]
 async fn main() {
-    // TcpListener::bind requires a SocketAddr
     let addr: SocketAddr = DEFAULT_ADDRESS
         .parse()
         .expect("Unable to parse address.");
 
+    
     let listener = TcpListener::bind(&addr).await
         .expect("Unable to bind to provided address.");
     
@@ -36,11 +36,7 @@ async fn main() {
         let client = client.clone();
         future::ok::<_, hyper::Error>(service_fn(move |req| routes::handle(req, client.clone())))
     });
-
-    let addr: SocketAddr = DEFAULT_ADDRESS
-        .parse()
-        .expect("Failed to parse address.");
-
+    
     let server = Server::bind(&addr).serve(cornish);
     println!("Static files available at http://{}/", &addr);
     
