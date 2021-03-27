@@ -12,7 +12,22 @@ pub async fn connect(conn_stream: TcpStream, conn_addr: SocketAddr) {
     println!("{:?} {:?}", conn_stream, conn_addr)
 }
 
-pub async fn handle<B>(ip: SocketAddr, req: Request<B>, static_: Static) -> Result<Response<Body>, IoError> {
+pub async fn handle<B>(req: Request<B>, static_: Static) -> Result<Response<Body>, IoError> {
+    match req.uri().path() {
+        "/connect" => {
+            let res = ResponseBuilder::new()
+                .status(StatusCode::MOVED_PERMANENTLY)
+                .header(header::LOCATION, "/index.html")
+                .body(Body::empty())
+                .expect("unable to build response");
+            Ok(res)
+        },
+        _ => {
+            static_.serve(req).await
+        }
+    }
+
+    /*
     if req.uri().path() == "/" {
         let res = ResponseBuilder::new()
             .status(StatusCode::MOVED_PERMANENTLY)
@@ -23,4 +38,5 @@ pub async fn handle<B>(ip: SocketAddr, req: Request<B>, static_: Static) -> Resu
     } else {
         static_.serve(req).await
     }
+    */
 }

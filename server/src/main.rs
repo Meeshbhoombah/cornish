@@ -2,7 +2,6 @@ use std::net::SocketAddr;
 use std::path::Path;
 
 use futures::future;
-use hyper::server::conn::AddrStream;
 use hyper::{Body, Request, Response};
 use hyper::service::{make_service_fn, service_fn};
 use hyper::Server;
@@ -18,12 +17,11 @@ async fn main() {
     let addr: SocketAddr = DEFAULT_ADDRESS.parse().expect("Unable to parse address.");
 
     // Does Path::new make a syscall? Is it unwise to use it for each connection?
-    let cornish = make_service_fn(|socket: &AddrStream| {
+    let cornish = make_service_fn(|_| {
         let client = Static::new(Path::new(CLIENT));
-        let ip = socket.remote_addr();
 
         future::ok::<_, hyper::Error>(service_fn(move |req: Request<Body>| {
-            routes::handle(ip.clone(), req, client.clone())
+            routes::handle(req, client.clone())
         }))       
     });
 
