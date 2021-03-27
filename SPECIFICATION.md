@@ -22,7 +22,23 @@ Requirements for the Cornish x Architect system.
     + Can get more with audio only streaming
         * Encourage the useage of an avatar
 
-- [x] Create TCP Listener
+### main
+- [ ] Get HOST and Port
+    + [x] v0: Hardcoded
+    + [ ] v1: Through CLI via clap
+- [ ] Create a new `SocketAddr` from HOST and PORT
+    + [x] v0: from Hardcoded
+    + [ ] v1: from CLI
+- [ ] Create a new `make_service_fn`
+    + [ ] Get the raw `TcpStream` of the current connection via `socket`
+        * `socket.into_inner();`
+    + [ ] 
+- [ ] Create a new `Server`
+    + [ ] Bind server to created `SocketAddr` and `make_service_fn`
+- [ ] Start Server
+- [ ] Error Handling and Logging
+
+### cornish 
 - [ ] Check if connection received is HTTP or TCP
     + Use Alice's example, except match on uri
     + Pass raw TcpStream to tungstenite
