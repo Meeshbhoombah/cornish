@@ -6,7 +6,7 @@ use seed::{prelude::*, *};
 
 const CONNECTION_STRING: &str = "";
 
-struct Window {
+struct Client {
     connection: String,
 }
 
@@ -19,16 +19,16 @@ enum Msg {
     DownlinkEstablishFailed(String),
 }
 
-fn init(_: Url, orders: &mut impl Orders<Msg>) -> Window {
+fn init(_: Url, orders: &mut impl Orders<Msg>) -> Client {
     // TODO establish real time connection with main server
     orders.notify(Msg::UplinkEstablish);
 
-    Window {
-        connection: "Test".to_string(),
+    Client {
+        connection: "127.0.0.1:3000".to_string(),
     }
 }
 
-fn update(msg: Msg, model: &mut Window, _: &mut impl Orders<Msg>) {
+fn update(msg: Msg, model: &mut Client, _: &mut impl Orders<Msg>) {
     match msg {
         Msg::UplinkEstablish(connection_string) => {
             println!("Establishing uplink...")
@@ -46,7 +46,7 @@ fn update(msg: Msg, model: &mut Window, _: &mut impl Orders<Msg>) {
     }
 }
 
-fn view(model: &Window) -> Node<Msg> {
+fn view(model: &Client) -> Node<Msg> {
     h1!["Hello, World!"]
 }
 
