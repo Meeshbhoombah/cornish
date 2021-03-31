@@ -35,10 +35,8 @@ Requirements for the Cornish x Architect system.
 - [ ] Start Server
 - [ ] Error Handling and Logging
 
-### cornish 
+### handler
 - [ ] Check if connection received is HTTP or TCP
-    + Use Alice's example, except match on uri
-    + Pass raw TcpStream to tungstenite
 - [ ] If HTTP, check serve index as a response
 - [ ] If TCP, establish webrtc connection
     + [ ] SDP
