@@ -30,9 +30,6 @@ Requirements for the Cornish x Architect system.
     + [x] v0: from Hardcoded
     + [ ] v1: from CLI
 - [ ] Create a new `make_service_fn`
-    + [ ] Get the raw `TcpStream` of the current connection via `socket`
-        * `socket.into_inner();`
-    + [ ] 
 - [ ] Create a new `Server`
     + [ ] Bind server to created `SocketAddr` and `make_service_fn`
 - [ ] Start Server
