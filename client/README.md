@@ -1,4 +1,5 @@
-# cornish-client 
+# cornish-client
+The cross-platform (mobile and desktop) browser client.
 
 ## Getting Started
 ### Prerequisites
