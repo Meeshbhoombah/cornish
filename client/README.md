@@ -1,6 +1,4 @@
 # cornish-client 
-## Seed Quickstart with Webpack
-[**LIVE DEMO:** quickstart-webpack.seed-rs.org](https://quickstart-webpack.seed-rs.org)
 
 ## Getting Started
 ### Prerequisites
