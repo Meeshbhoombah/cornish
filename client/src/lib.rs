@@ -35,7 +35,9 @@ enum Msg {
 }
 
 fn init(_: Url, orders: &mut impl Orders<Msg>) -> Client {
-    // TODO establish real time connection with main server
+    // TODO get dtls parameters
+    // TODO create transports (produce/consume) using `mediasoup::transport`
+    // TODO 
     Client {
         connection: "127.0.0.1:3000".to_string(),
     }

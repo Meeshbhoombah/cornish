@@ -1,14 +1,15 @@
 # Specification
-Requirements for the Cornish x Architect system.
+High-level overview of the combined product and technical requirements for the
+Cornish x Architect system.
 
+- [ ] SSO w/ Google (limited to @cornish.edu and @Meeshbhoombah)
 - [ ] Networked Thinking
-- [ ] Text-Channel
+- [ ] Conversations
 - [ ] Rooms
 - [ ] Attributes
 - [ ] Roles
-- [ ] Serve a browser client
-- [ ] Support authentication via Gmail
-    + [ ] Only allow @meeshbhoombah and Cornish Faculty/Staff/Students
+
+- [ ] Mobile-reponsive Browser Client 
 
 ## Server
 ### Constraints
@@ -120,17 +121,18 @@ Studio {
 
 ### room
 Store Room data in Postgres
-- [ ] Mesh <= 3 peers -> SFU w/ Mediasoup
-- [ ] mutated SDP
-
-Build simple, scalable tester.
 
 ## Client
 ### Constraints
-- [ ] Support Chrome, Firefox, Safari, Edge
-- [ ] Mobile Responsive - Safari/Chrome
+- Support Chrome, Firefox, Safari, Edge
+- Mobile Responsive - Safari/Chrome
 
 ### User can navigate to cornish.app
+- [ ] Client establishes real-time connection with Server
+- [ ] Client checks server heartbeat
+    + [ ] Client schedules server heartbeat test for every minute
+        * [ ] If server heartbeat fails, recheck every 15 seconds
+        * [ ] If server heartbeat succeeds, continue as normal
 
 ### Landing 
 - [ ] User can sign in with a cornish.edu email or Meeshbhoombah
