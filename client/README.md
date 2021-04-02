@@ -1,17 +1,5 @@
-# Seed Quickstart with Webpack
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/745c7b1d-5894-4f58-be28-e730a11e1ff4/deploy-status)](https://app.netlify.com/sites/quickstart-webpack/deploys)
-
-<!-- prettier-ignore -->
-> I want to write fast, reliable and efficient web apps. Quickly.  \
-And I like Rust and documentation.
-
----
-
-**!!! New Rust-only quickstart in development! => [Seeder](https://github.com/MartinKavik/seeder) !!!**
-
----
-
+# `cornish-client`
+## Seed Quickstart with Webpack
 [**LIVE DEMO**: quickstart-webpack.seed-rs.org](https://quickstart-webpack.seed-rs.org)
 
 Main components:
@@ -26,34 +14,23 @@ Main components:
 
 ---
 
-# Zero to Hero
-
-> How to create your new app, modify it and deploy it - step by step guide.
-
-## 1. Create a new project
-
-I want to show you how to create, build and host your website for free, so we will need a public GitHub repository.
-
-1. The simplest way how to do it is to click on the green button **Use this template** on the GitHub [profile](https://github.com/seed-rs/seed-quickstart-webpack) of this quickstart.
-
-1. Make sure Git doesn't automatically convert your newlines to CLRF because linters don't like it.
-    - Run `$ git config --global core.autocrlf` in your terminal and it should return `input` or `false`. See [Git docs](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration) for more info.
-
-1. Clone your new repository to your local machine. I use [GitKraken](https://www.gitkraken.com/), but you are probably better developer than me - use your favorite terminal.
-
-## 2. Install / check required tools
+## Installation
 
 1. Make sure you have basic tools installed:
 
-   - [Yarn](https://yarnpkg.com/lang/en/docs/install) - run `$ yarn -v` in terminal. It should output something like `1.22.4`
+   - [Yarn](https://yarnpkg.com/lang/en/docs/install) - run `$ yarn -v` in 
+     terminal. It should output something like `1.22.4`
    - [Node.js](https://nodejs.org) - `$ node -v` => `v12.13.0`
-   - [Rust](https://www.rust-lang.org/tools/install) - `$ rustc -V` => `rustc 1.43.1 (8d69840ab 2020-05-04)`
-   - Rust target `wasm` - `$ rustup target list` => `.. wasm32-unknown-unknown (installed) ..`
+   - [Rust](https://www.rust-lang.org/tools/install) - `$ rustc -V` 
+     => `rustc 1.43.1 (8d69840ab 2020-05-04)`
+   - Rust target `wasm` - `$ rustup target list` => 
+     `.. wasm32-unknown-unknown (installed) ..`
        - Install: `$ rustup target add wasm32-unknown-unknown`
        
 1. Platform-specific tools like `ssl` and `pkg-config`:
     - Follow recommendations in build errors (during the next chapter).
-    - _Note_: Don't hesitate to write a tutorial and create PR or write a Wiki page for your platform.
+    - _Note_: Don't hesitate to write a tutorial and create PR or write a 
+      Wiki page for your platform.
 
 1. These tools are required by some commands:
 
@@ -79,8 +56,10 @@ I want to show you how to create, build and host your website for free, so we wi
 1. Install Webpack and other dependencies - `$ yarn`
 1. Try to start dev-server - `$ yarn start` - and then open [localhost:8000](http://localhost:8000) in a browser.
 1. Stop server (try `Ctrl+c`).
-1. Try to lint your project - `$ cargo make verify_only` - you shouldn't see any errors.
-1. Modify files like `LICENCE`, `README.md` and `Cargo.toml` as you wish and push changes into GitHub.
+1. Try to lint your project - `$ cargo make verify_only` - you shouldn't see 
+   any errors.
+1. Modify files like `LICENCE`, `README.md` and `Cargo.toml` as you wish and 
+   push changes into GitHub.
 
 ## 4. Write your website
 

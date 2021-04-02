@@ -203,8 +203,6 @@ pub fn asset_path(asset: &str) -> String {
 #[wasm_bindgen(start)]
 pub fn run() {
     log!("Starting app...");
-
     App::start("app", init, update, view);
-
     log!("App started.");
 }
