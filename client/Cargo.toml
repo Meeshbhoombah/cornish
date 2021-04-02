@@ -18,6 +18,12 @@ wasm-bindgen-test = "0.3.18"
 [dependencies]
 seed = "0.8.0"
 
+[dependencies.web-sys]
+version = "0.3.50"
+features = [
+    "RtcOfferOptions"
+]
+
 [profile.release]
 lto = true
 opt-level = 'z'
