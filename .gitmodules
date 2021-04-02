@@ -1,3 +1,0 @@
-[submodule "mediasoup"]
-	path = mediasoup
-	url = https://github.com/nazar-pc/mediasoup.git
