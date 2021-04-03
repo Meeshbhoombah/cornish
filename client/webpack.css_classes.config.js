@@ -5,7 +5,21 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 // Webpack generates `css_classes.rs` with this config.
 // This config is used in command `yarn generate:css_classes`.
-// See `webpack.config.js` for more info about individual settings.
+// See `webpack.config.js` for more info about individual settings
+
+// The purpose of this webpack config is to bundle the imported CSS styles 
+// found in `/static/index.css_classes.ts`.
+//
+// The module leverages `file-loader` for resolving `import` and `require` 
+// within the project's `.ts` files. `style-loader` injects CSS into the DOM
+// via lazy-loaded `<style></style>`s (on default, can be changed, but is 
+// recommended). `css-loader` resolves `@import`s and `urls()` as within 
+// `.css` files, as though they were `.ts` (or `.js`) files.
+//
+// The end result of this process is piped into `postcss-loader`, which 
+// generates `/src/generated/css_classes.rs` (the configuration for which can
+// be found in `postcss.config.js`) for usage within the client's Rust code.
+//
 
 module.exports = (env, argv) => {
   return {
