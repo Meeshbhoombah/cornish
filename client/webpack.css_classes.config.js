@@ -1,25 +1,59 @@
+//
+// `webpack.css_classes.config.js`
+// The purpose of this webpack config is to bundle and transpile the imported 
+// CSS styles found in `/css/styles.css` for usage within the main Rust logic.
+//
+// All client styling is aggregated in `styles.css` with `@import` statements.
+//
+// When the `geenerate css` script is executed, this module starts in 
+// `/static/index.css_classees.ts`.
+//  leverages `file-loader` for resolving `import` and `require` 
+// within the `index.css_classes.ts`. `style-loader` injects CSS into the DOM 
+// via lazy-loaded `<style></style>`s (as per default, can be changed, but using
+// recommended config). `css-loader` resolves `@import`s and `urls()` within `.css` 
+// files, as though they were `.ts` (or `.js`) files.
+//
+// The end result of this process is piped into `postcss-loader`, which 
+// generates `/src/generated/css_classes.rs` for usage within the client's Rust 
+// code after applying both TailwindCSS and PostCSS. `postcss.config.js` contains
+// this portion of the pipeline's configuration.
+//
+// Usage:
+//  Styling can be added to `/css`. 
+//
+//  Import the styles into `styles.css`.
+//
+//  CSS bindings generated from the pipeline can be used in Rust.
+//      ```/example/lib.rs
+//      use generated::css_classes::C;
+//      pub fn view() {
+//          div![
+//                C![
+//                    IF!(not(model.in_prerendering) => C.fade_in),
+//                    C.min_h_screen,
+//                    C.flex,
+//                    C.flex_col,
+//                ],
+//                match model.page {
+//                    Page::Home => page::home::view(&model.base_url),
+//                    Page::About => page::about::view(),
+//                    Page::NotFound => page::not_found::view(),
+//                },
+//                page::partial::header::view(model),
+//                page::partial::footer::view(),
+//          ]
+//      }
+//
+//      ```
+//
+
+
 const path = require("path");
 
 const WebpackBar = require("webpackbar");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-// Webpack generates `css_classes.rs` with this config.
-// This config is used in command `yarn generate:css_classes`.
-// See `webpack.config.js` for more info about individual settings
 
-// The purpose of this webpack config is to bundle the imported CSS styles 
-// found in `/static/index.css_classes.ts`.
-//
-// The module leverages `file-loader` for resolving `import` and `require` 
-// within the project's `.ts` files. `style-loader` injects CSS into the DOM
-// via lazy-loaded `<style></style>`s (on default, can be changed, but is 
-// recommended). `css-loader` resolves `@import`s and `urls()` as within 
-// `.css` files, as though they were `.ts` (or `.js`) files.
-//
-// The end result of this process is piped into `postcss-loader`, which 
-// generates `/src/generated/css_classes.rs` (the configuration for which can
-// be found in `postcss.config.js`) for usage within the client's Rust code.
-//
 
 module.exports = (env, argv) => {
   return {

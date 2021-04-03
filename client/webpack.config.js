@@ -15,22 +15,18 @@ module.exports = (env, argv) => {
         hints: false
     },
     entry: {
-      // Bundle root with name `app.js`.
       app: path.resolve(__dirname, "index.ts")
     },
     output: {
-      // You can change it to e.g. `/ui/`, but also edit `historyApiFallback` below and `<base href..`> in `index.hbs`.
       publicPath: '/',
-      // You can deploy your site from this folder (after build with e.g. `yarn build:release`)
       path: dist,
       filename:'[name].[contenthash].js'
     },
     devServer: {
       contentBase: dist,
-      // You can connect to dev server from devices in your network (e.g. 192.168.0.3:8000).
       host: "0.0.0.0",
       port: 8000,
-      // Route everything to index to support SPA. It should be the same like `publicPath` above.
+      // must reflect `output.publicPath` above, for SPA support during development  
       historyApiFallback: {
         index: '/'
       },
@@ -44,9 +40,9 @@ module.exports = (env, argv) => {
       },
     },
     plugins: [
-      // Show compilation progress bar in console.
+      // Compilation progress 
       new WebpackBar(),
-      // Clean `dist` folder before compilation.
+      // Clean `dist` folder before compilation
       new CleanWebpackPlugin(),
       // Extract CSS styles into a file.
       new MiniCssExtractPlugin({
@@ -74,7 +70,6 @@ module.exports = (env, argv) => {
         }
       ]),
     ],
-    // Webpack try to guess how to resolve imports in this order:
     resolve: {
       extensions: [".ts", ".js", ".wasm"],
       alias: {
