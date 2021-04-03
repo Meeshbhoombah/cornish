@@ -27,7 +27,8 @@ The cross-platform (mobile and desktop) browser client.
 - Install: `$ cargo install cargo-make`
 
 [nightly rustfmt](https://github.com/rust-lang/rustfmt#on-the-nightly-toolchain)
-- Check: `$ cargo +nightly fmt -- -V` => `rustfmt 1.4.14-nightly (a5cb5d26 2020-04-14)`
+- Check: `$ cargo +nightly fmt -- -V` => `rustfmt 1.4.14-nightly 
+  (a5cb5d26 2020-04-14)`
 - Install:
     1. `$ rustup toolchain install nightly`
     2. `$ rustup component add rustfmt --toolchain nightly`
@@ -50,29 +51,11 @@ The cross-platform (mobile and desktop) browser client.
    1. Open [localhost:8000](http://localhost:8000) in a browser.
    1. _Tip_: Always test it also in production environment because e.g. routing 
       is a little bit different among servers.
-1. **Always run `$ cargo make verify`** before push to make sure CI pipeline will 
-   accept your code.
+1. **Always run `$ cargo make verify`** before push to make sure CI pipeline 
+   will accept your code.
     - It'll format your code, lint it and start headless tests in Firefox.
     - You can change its behaviour in `Makefile.tom` - task `verify` 
       (similar task `verify_only` is used in CI).
-
-#### Travis CI
-<details>
-<summary>Content (this guide and related config file are not maintained)</summary>
-
-1. Sync your [TravisCI](https://travis-ci.org/) account with your GitHub one.
-1. Find repository with your app in [your list](https://travis-ci.org/account/repositories) and click on `Settings`.
-1. Add _Environment Variable_ `NETLIFY_SITE_ID` and set it's value to **Site id**.
-1. Add _Environment Variable_ `NETLIFY_ACCESS_TOKEN` and set it's value to **Access token**.
-1. Switch to tab `Current` and click `Activate repository`.
-1. _[Optional]_ Add badge to project's `/README.md` (Repository detail > Click on 
-   badge next to the rep. name > `IMAGE URL` change to `MARKDOWN`)
-1. _[Optional]_ Modify `/.travis.yml`.
-    - Replace `yarn build:prerender` with `yarn build:release` if you don't want to prerender pages.
-    - _Tip:_ If jobs don't want to start after push, check Repository 
-      detail > `More options` > `Requests`.
-   
-</details>
 
 ## Usage
 ### Main application entrypoint: `src/lib.rs`
