@@ -2,6 +2,12 @@
 The cross-platform (mobile and desktop) browser client.
 
 ## Getting Started
+Familiarize yourself with the [Architecture here](/ARCHITECTURE.md).
+
+You'll find:
+- An overview of the file system
+- A top-down prespective of the `cornish-client` 
+
 ### Prerequisites
 - [Yarn](https://yarnpkg.com/lang/en/docs/install) - run `$ yarn -v` in terminal. 
   It should output something like `1.22.4`
@@ -12,12 +18,12 @@ The cross-platform (mobile and desktop) browser client.
  `.. wasm32-unknown-unknown (installed) ..`
     - Install: `$ rustup target add wasm32-unknown-unknown`
        
-####  Platform-specific tools like `ssl` and `pkg-config`:
+Platform-specific tools like `ssl` and `pkg-config`:
 - Follow recommendations in build errors (during the next chapter).
 - _Note_: Don't hesitate to write a tutorial and create PR or write a 
   Wiki page for your platform.
 
-#### These tools are required by some commands:
+These tools are required by some commands:
 [wasm-pack](https://rustwasm.github.io/wasm-pack/)
 - Check: `$ wasm-pack -V` => `wasm-pack 0.9.1`
 - Install: `$ cargo install wasm-pack`
@@ -41,6 +47,8 @@ The cross-platform (mobile and desktop) browser client.
 1. Try to lint your project - `$ cargo make verify_only` - you shouldn't see 
    any errors.
 
+### Development
+
 ### Testing
 1. Run `$ cargo make test_h firefox` for headless testing in Firefox.
    - There are more similar commands - see `Makefile.toml`
@@ -57,52 +65,9 @@ The cross-platform (mobile and desktop) browser client.
     - You can change its behaviour in `Makefile.tom` - task `verify` 
       (similar task `verify_only` is used in CI).
 
-## Usage
-### Main application entrypoint: `src/lib.rs`
-1. Change `TITLE_SUFFIX` value.
-1. Delete `MAIL_TO_KAVIK` and `MAIL_TO_HELLWEB`.
-1. Write a new body for function `view`.
-
-### Favicons
-1. Delete or replace files in `/favicons`.
-1. Open `static/templates/favicons.hbs` in your IDE.
-1. Delete content or update it.
-   - _Note_: Templates are written in [Handlebars](https://handlebarsjs.com/).
-
-### Loading page
-1. Open `static/templates/loading_page.hbs` in your IDE.
-1. Delete content or update it.
-
-### Social media & basic settings
-1. Open `static/templates/social_media.hbs` in your IDE.
-1. Delete content or update it.
-
-### HTML Template
-1. Open `static/index.hbs` in your IDE.
-1. Update content.
-
-### Fonts
-1. Delete or replace files and directories in `static/fonts`.
-1. Open `/css/fonts.css` in your IDE.
-1. Delete content or update it.
-
-### Images & other files
-1. Delete or replace files in `static/images`.
-1. Delete `static/Martin_Kavik_resume.pdf`.
-
-### TailwindCSS
-1. Open `tailwind.config.js` in your IDE.
-1. Update content or replace it with the default one:
-
-```js
-module.exports = {
-  theme: {},
-  variants: {},
-  plugins: []
-};
-```
-
-### Custom CSS
+### Production
+Read more about building for [Production here](/PRODUCTION.md).
+om CSS
 1. Open `/css/custom.css` in your IDE.
 1. Delete content or update it.
 

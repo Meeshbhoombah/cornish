@@ -1,3 +1,8 @@
+/*
+ * index.ts
+ * 
+ */
+
 import "./css/styles.css";
 
 (async () => {

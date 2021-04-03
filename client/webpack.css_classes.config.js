@@ -1,12 +1,12 @@
 //
 // `webpack.css_classes.config.js`
 // The purpose of this webpack config is to bundle and transpile the imported 
-// CSS styles found in `/css/styles.css` for usage within the main Rust logic.
+// CSS styles found in `css/styles.css` for usage within the main Rust logic.
 //
 // All client styling is aggregated in `styles.css` with `@import` statements.
 //
 // When the `geenerate css` script is executed, this module starts in 
-// `/static/index.css_classees.ts`.
+// `/static/index.css_clases.ts`.
 //  leverages `file-loader` for resolving `import` and `require` 
 // within the `index.css_classes.ts`. `style-loader` injects CSS into the DOM 
 // via lazy-loaded `<style></style>`s (as per default, can be changed, but using
