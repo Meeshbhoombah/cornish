@@ -1,11 +1,9 @@
 [package]
 version = "0.1.0"
-name = "kavik_cz"
-repository = "https://github.com/MartinKavik/kavik.cz"
-authors = ["Martin Kavík <martin@kavik.cz>"]
-description = "Personal website kavik.cz"
-categories = ["wasm", "rust", "tailwindcss", "seed", "personal", "website"]
-license = "MIT"
+name = "cornish-client"
+description = "The cross platform browser client for Architect x Cornish"
+repository = "https://github.com/thearchproj/cornish"
+authors = ["Rohan Mishra <rohanmishra2017@gmail.com>"]
 readme = "./README.md"
 edition = "2018"
 

@@ -1,7 +1,8 @@
 [package]
 name = "cornish-server"
 version = "0.1.0"
-authors = ["Rohan Mishra <rohanmishra2017@gmail.com>"]
+authors = ["Rohan Mishra <rohanmishra2017@gmail.com>"]a
+readme = "./README.md"
 edition = "2018"
 
 [dependencies]

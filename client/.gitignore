@@ -1,8 +1,14 @@
+package-lock.json
+
+node_modules
+target
+
 dist
+
 node_modules
 bin
 pkg
-target
+
 wasm-pack.log
 .idea
 
