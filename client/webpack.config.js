@@ -73,7 +73,7 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: [".ts", ".js", ".wasm"],
       alias: {
-        crate: __dirname
+        crate: __dirname,
       }
     },
     module: {
