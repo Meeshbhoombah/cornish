@@ -1,5 +1,5 @@
 # cornish-client
-The cross-platform (mobile and desktop) browser client.
+The cross-platform browser client for Architect x Cornish.
 
 ## Getting Started
 Familiarize yourself with the [Architecture here](/ARCHITECTURE.md).
