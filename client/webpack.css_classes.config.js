@@ -43,7 +43,6 @@
 //                page::partial::footer::view(),
 //          ]
 //      }
-//
 //      ```
 //
 
@@ -57,7 +56,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = (env, argv) => {
   return {
-    entry: path.resolve(__dirname, "./static/index.css_classes.ts"),
+    entry: path.resolve(__dirname, "./static/index.css.ts"),
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: "css_classes.js",
