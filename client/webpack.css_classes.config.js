@@ -1,32 +1,32 @@
-//
-// `webpack.css_classes.config.js`
-// The purpose of this webpack config is to bundle and transpile the imported 
-// CSS styles found in `css/styles.css` for usage within the main Rust logic.
-//
-// All client styling is aggregated in `styles.css` with `@import` statements.
-//
-// When the `geenerate css` script is executed, this module starts in 
-// `/static/index.css_clases.ts`.
-//  leverages `file-loader` for resolving `import` and `require` 
-// within the `index.css_classes.ts`. `style-loader` injects CSS into the DOM 
-// via lazy-loaded `<style></style>`s (as per default, can be changed, but using
-// recommended config). `css-loader` resolves `@import`s and `urls()` within `.css` 
-// files, as though they were `.ts` (or `.js`) files.
-//
-// The end result of this process is piped into `postcss-loader`, which 
-// generates `/src/generated/css_classes.rs` for usage within the client's Rust 
-// code after applying both TailwindCSS and PostCSS. `postcss.config.js` contains
-// this portion of the pipeline's configuration.
-//
-// Usage:
-//  Styling can be added to `/css`. 
-//
-//  Import the styles into `styles.css`.
-//
-//  CSS bindings generated from the pipeline can be used in Rust.
-//      ```/example/lib.rs
-//      use generated::css_classes::C;
-//      pub fn view() {
+/*
+ * `webpack.css_classes.config.js`
+ * The purpose of this webpack config is to bundle and transpile the imported 
+ * CSS styles found in `css/styles.css` for usage within the main Rust logic.
+ *
+ * All client styling is aggregated in `styles.css` with `@import` statements.
+ *
+ * When the `geenerate css` script is executed, this module starts in 
+ * `/static/index.css_clases.ts`.
+ * leverages `file-loader` for resolving `import` and `require` 
+ * within the `index.css_classes.ts`. `style-loader` injects CSS into the DOM 
+ * via lazy-loaded `<style></style>`s (as per default, can be changed, but using
+ * recommended config). `css-loader` resolves `@import`s and `urls()` within `.css` 
+ * files, as though they were `.ts` (or `.js`) files.
+ *
+ * The end result of this process is piped into `postcss-loader`, which 
+ * generates `/src/generated/css_classes.rs` for usage within the client's Rust 
+ * code after applying both TailwindCSS and PostCSS. `postcss.config.js` contains
+ * this portion of the pipeline's configuration.
+ *
+ * Usage:
+ *  Styling can be added to `/css`. 
+ *
+ *  Import the styles into `styles.css`.
+ *
+ *  CSS bindings generated from the pipeline can be used in Rust.
+ *      ```/example/lib.rs
+ *      use generated::css_classes::C;
+ *      pub fn view() {
 //          div![
 //                C![
 //                    IF!(not(model.in_prerendering) => C.fade_in),
@@ -44,7 +44,7 @@
 //          ]
 //      }
 //      ```
-//
+*/
 
 
 const path = require("path");
