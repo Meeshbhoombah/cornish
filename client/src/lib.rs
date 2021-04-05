@@ -2,14 +2,15 @@
 
 use seed::{prelude::*, *};
 
-#[wasm_bindgen(module = "mediasoup")]
+#[wasm_bindgen]
 extern "C" {
-    type mediasoup; 
+    #[wasm_bindgen (js_namespace = mediasoup)]
+    type mediasoup;
 }
 
 
 fn init(_: Url, _: &mut impl Orders<Msg>) -> Model {
-    // log!(mediasoup);
+    //log!(mediasoup);
     Model::default()
 }
 
