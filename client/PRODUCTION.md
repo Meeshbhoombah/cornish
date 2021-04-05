@@ -2,9 +2,9 @@
 
 ## Checklist
 ### Favicons
-1. Delete or replace files in `/favicons`.
-1. Open `static/templates/favicons.hbs` in your IDE.
-1. Delete content or update it.
+- [ ] Delete or replace files in `/favicons`.
+- [ ] Open `static/templates/favicons.hbs` in your IDE.
+- [ ] Delete content or update it.
    - _Note_: Templates are written in [Handlebars](https://handlebarsjs.com/).
 
 ### Loading page
