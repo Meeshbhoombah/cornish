@@ -1,8 +1,8 @@
 /// `connection.rs`
 /// 
-/// Takes in the `mediasoup` object bound the browser's `window` object in
-/// the client's root `index.ts` and creates a useable Rust module such 
-/// that a Webrtc connection can be made from Rust.
+/// Takes in the `mediasoup` object bound to the browser's `window` object in
+/// the `cornish-client`'s root `index.ts` and creates a useable Rust module 
+/// such that a Webrtc connection can be made via WASM.
 ///
 
 /// Reads in a connection string that speceficies the host, port, and,
@@ -21,4 +21,14 @@
 /// }
 /// ```
 pub fn new(connection_url: &str) {}
+
+/*
+struct Connection {
+    
+}
+
+enum Msg {
+    Establish(Connection)
+}
+*/
 
