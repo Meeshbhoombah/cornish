@@ -19,8 +19,7 @@ seed = "0.8.0"
 [dependencies.web-sys]
 version = "0.3.45"
 features = [
-  "ScrollToOptions",
-  "Navigator",
+    "HtmlMediaElement",
 ]
 
 [profile.release]

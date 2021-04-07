@@ -26,9 +26,5 @@ pub fn new(connection_url: &str) {}
 struct Connection {
     
 }
-
-enum Msg {
-    Establish(Connection)
-}
 */
 
