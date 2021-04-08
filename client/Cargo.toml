@@ -14,11 +14,14 @@ crate-type = ["cdylib"]
 wasm-bindgen-test = "0.3.18"
 
 [dependencies]
+serde = "1.0.125"
 seed = "0.8.0"
 
 [dependencies.web-sys]
 version = "0.3.45"
 features = [
+    "WebSocket",
+    "MediaStream",
     "HtmlMediaElement",
 ]
 

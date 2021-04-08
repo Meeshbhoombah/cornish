@@ -20,11 +20,13 @@
 ///     Err(err) => {},
 /// }
 /// ```
-pub fn new(connection_url: &str) {}
 
 /*
 struct Connection {
-    
+    device: Device;
 }
 */
+
+pub fn new(connection_url: &str) {}
+pub fn send() {}
 

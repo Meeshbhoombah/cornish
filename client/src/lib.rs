@@ -1,52 +1,86 @@
 #![allow(clippy::wildcard_imports)]
 
-use web_sys::{HtmlMediaElement};
+use serde::{Serialize, Deserialize};
+use web_sys:: {
+    HtmlMediaElement,
+    MediaStream,
+    WebSocket,
+};
+
 use seed::{prelude::*, *};
 
-// mod connection;
-
 fn init(_: Url, _: &mut impl Orders<Msg>) -> Client {
-    /*
-    // TODO change url based on environment (dev or prod)
-    // dev, connection is hardcoded to 3000
-    const SERVER_ADDRESS = "127.0.0.1:3000/ws"
-    // prod = url + "/connect"
+    const SERVER_ADDRESS: &str = "ws://localhost:3000/ws";
 
-    // TODO send Msg::ConnectionEstablish(SERVER_ADDRESS) after inital render 
-
-    orders
-        .after_next_render(Msg::DisplayInitalize)
-    */
-    Client::default()
+    Client {
+        connection: WebSocket::new(SERVER_ADDRESS).expect("`new()` connection"),
+        send_display: ElRef::<HtmlMediaElement>::default(),
+        send_stream: MediaStream::new().expect("`new()` send_stream"),
+        receive_display: ElRef::<HtmlMediaElement>::default(),
+        receive_stream: MediaStream::new().expect("`new()` receive_stream"), 
+    }
 }
 
-#[derive(Default)]
+
 struct Client {
+    connection: WebSocket,
     send_display: ElRef<HtmlMediaElement>,
+    send_stream: MediaStream,
     receive_display: ElRef<HtmlMediaElement>,
+    receive_stream: MediaStream,
+}
+
+
+#[derive(Serialize, Deserialize)]
+#[derive(Copy, Clone)]
+enum ClientMessage {
+    Init,
+    
+    ConnectProducerTransport,
+    Produce,
+
+    ConnectConsumerTransport,
+    Consume,
+
+    Resume
+}
+
+#[derive(Serialize, Deserialize)]
+struct ClientInit {
+    action: String,
 }
 
 #[derive(Copy, Clone)]
 enum Msg {
     SendDisplayMetaDataLoaded,
-    ReceiveDisplayMetaDataLoaded
+    ReceiveDisplayMetaDataLoaded,
+
+    Send(ClientMessage),
 }
 
 fn update(msg: Msg, model: &mut Client, _: &mut impl Orders<Msg>) {
     match msg {
         Msg::SendDisplayMetaDataLoaded => {
             let video = model.send_display.get().expect("`get()` send_display");
-            video.play();
+            video.play().expect("`play()` send_display");
         },
         Msg::ReceiveDisplayMetaDataLoaded => {
             let video = model.receive_display.get().expect("`get()` recieve_display");
-            video.play();
+            video.play().expect("`play()` receive_display");
+        },
+        Msg::Send(message) => {
+            match message {
+                ClientMessage::Init => {
+                    let msg = ClientInit {
+                        action: String::from("Init"),
+                    };
+
+                    let data = JsValue::from_serde(&msg).unwrap();
+                },
+                _ => {},
+            }
         },
     }
-}
-
-fn video_did_thing() {
-    log!("Test")
 }
 
 #[allow(clippy::trivially_copy_pass_by_ref)]
