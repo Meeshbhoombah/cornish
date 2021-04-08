@@ -15,8 +15,8 @@ declare global {
 import * as mediasoupClient from 'mediasoup-client';
 window.mediasoup = mediasoupClient;
 
-import { types } from 'mediasoup-client';
-window.mediasoupTypes = types;
+import { types as mediasoupTypes } from 'mediasoup-client';
+window.mediasoup.types = mediasoupTypes;
 
 (async () => {
   // Note: files in `./pkg/` will be created on the first build.

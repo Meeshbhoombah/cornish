@@ -1,6 +1,6 @@
 #![allow(clippy::wildcard_imports)]
 
-use serde::{Serialize, Deserialize};
+use serde::{ser, Serialize, Deserialize};
 use web_sys:: {
     HtmlMediaElement,
     MediaStream,
@@ -21,7 +21,6 @@ fn init(_: Url, _: &mut impl Orders<Msg>) -> Client {
     }
 }
 
-
 struct Client {
     connection: WebSocket,
     send_display: ElRef<HtmlMediaElement>,
@@ -30,6 +29,26 @@ struct Client {
     receive_stream: MediaStream,
 }
 
+#[wasm_bindgen(js_namespace = ["window", "mediasoupTypes"])]
+extern "C" {
+    #[wasm_bindgen]
+    pub type RtpParameters;
+}
+
+impl Serialize for RtpParameters {
+    fn seralize<S>(&self, seralizer: S) -> Result<S::Ok, S::Error>
+    where
+        S: ser::Serializer,
+    {
+        JsValue::from_serde(&self) 
+    }
+}
+
+#[derive(Serialize, Deserialize)]
+struct ClientInit {
+    action: String,
+    rtpCapabilities: RtpParameters,
+}
 
 #[derive(Copy, Clone)]
 enum ClientMessage {
@@ -42,20 +61,6 @@ enum ClientMessage {
     Consume,
 
     Resume
-}
-
-#[wasm_bindgen(js_namespace = ["window", "mediasoupTypes"])]
-extern "C" {
-    #[wasm_bindgen]
-    pub type RtpParameters;
-}
-
-// TODO custom seralize/deseralization for RtpParameters
-
-#[derive(Serialize, Deserialize)]
-struct ClientInit {
-    action: String,
-    rtpCapabilities: RtpParameters,
 }
 
 #[derive(Copy, Clone)]
