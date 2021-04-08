@@ -31,7 +31,6 @@ struct Client {
 }
 
 
-#[derive(Serialize, Deserialize)]
 #[derive(Copy, Clone)]
 enum ClientMessage {
     Init,
