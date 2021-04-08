@@ -50,6 +50,7 @@ extern "C" {
     pub type RtpParameters;
 }
 
+// TODO custom seralize/deseralization for RtpParameters
 
 #[derive(Serialize, Deserialize)]
 struct ClientInit {
