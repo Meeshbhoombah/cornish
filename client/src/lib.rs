@@ -13,6 +13,9 @@ fn init(_: Url, _: &mut impl Orders<Msg>) -> Client {
     // prod = url + "/connect"
 
     // TODO send Msg::ConnectionEstablish(SERVER_ADDRESS) after inital render 
+
+    orders
+        .after_next_render(Msg::DisplayInitalize)
     */
     Client::default()
 }
@@ -25,22 +28,25 @@ struct Client {
 
 #[derive(Copy, Clone)]
 enum Msg {
-    // ConnectionEstablish,
+    SendDisplayMetaDataLoaded,
+    ReceiveDisplayMetaDataLoaded
 }
 
 fn update(msg: Msg, model: &mut Client, _: &mut impl Orders<Msg>) {
-    /*
     match msg {
-        Msg::ConnectionEstablish(server_address) => {
-            // TODO take the server address and spawn a connection on a new thread
-            // TODO attach this connection to the client
-            match let c = connection::new(server_address) {
-                Ok(c)
-                Err(e)
-            }
+        Msg::SendDisplayMetaDataLoaded => {
+            let video = model.send_display.get().expect("`get()` send_display");
+            video.play();
+        },
+        Msg::ReceiveDisplayMetaDataLoaded => {
+            let video = model.receive_display.get().expect("`get()` recieve_display");
+            video.play();
         },
     }
-    */
+}
+
+fn video_did_thing() {
+    log!("Test")
 }
 
 #[allow(clippy::trivially_copy_pass_by_ref)]
@@ -50,6 +56,7 @@ fn view(model: &Client) -> Node<Msg> {
         figure![
             video![
                 el_ref(&model.send_display),
+                ev(Ev::LoadedMetaData, |_| Msg::SendDisplayMetaDataLoaded),
                 id!["preview-send"],
                 figcaption!["Send Preview"],
                 attrs! {
@@ -61,6 +68,7 @@ fn view(model: &Client) -> Node<Msg> {
         figure![
             video![
                 el_ref(&model.receive_display),
+                ev(Ev::LoadedMetaData, |_| Msg::ReceiveDisplayMetaDataLoaded),
                 id!["preview-receive"],
                 figcaption!["Receive Preview"],
                 attrs! {
