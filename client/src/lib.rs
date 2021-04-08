@@ -44,9 +44,17 @@ enum ClientMessage {
     Resume
 }
 
+#[wasm_bindgen(js_namespace = ["window", "mediasoupTypes"])]
+extern "C" {
+    #[wasm_bindgen]
+    pub type RtpParameters;
+}
+
+
 #[derive(Serialize, Deserialize)]
 struct ClientInit {
     action: String,
+    rtpCapabilities: RtpParameters,
 }
 
 #[derive(Copy, Clone)]
@@ -70,11 +78,14 @@ fn update(msg: Msg, model: &mut Client, _: &mut impl Orders<Msg>) {
         Msg::Send(message) => {
             match message {
                 ClientMessage::Init => {
+                    /*
                     let msg = ClientInit {
                         action: String::from("Init"),
+                        rtpCapabilities: 
                     };
 
                     let data = JsValue::from_serde(&msg).unwrap();
+                    */
                 },
                 _ => {},
             }
