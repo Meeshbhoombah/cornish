@@ -29,27 +29,30 @@ struct Client {
     receive_stream: MediaStream,
 }
 
+
 #[wasm_bindgen(js_namespace = ["window", "mediasoupTypes"])]
 extern "C" {
     #[wasm_bindgen]
-    pub type RtpParameters;
+    pub type RtpCapabilities;
 }
 
-// TODO before we try to seralize, try to inspect
-// https://rustwasm.github.io/wasm-bindgen/contributing/design/importing-js-struct.html
-impl Serialize for RtpParameters {
+// TODO
+impl Serialize for RtpCapabilities {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: ser::Serializer,
     {
-        JsValue::from_serde(&self) 
+        let mut state = seralize.seralize_struct("RtpCapabilities", 2)
+        // TODO add fields with Array<RtpCodecCapability>, Array<RtpHeaderExtension>
+        // https://rustwasm.github.io/wasm-bindgen/contributing/design/importing-js-struct.html
+        // TODO recursively serialize all types
     }
 }
 
-#[derive(Serialize, Deserialize)]
+// #[derive(Serialize, Deserialize)]
 struct ClientInit {
     action: String,
-    rtpCapabilities: RtpParameters,
+    rtpCapabilities: RtpCapabilities,
 }
 
 #[derive(Copy, Clone)]
