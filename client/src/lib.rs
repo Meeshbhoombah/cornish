@@ -35,8 +35,10 @@ extern "C" {
     pub type RtpParameters;
 }
 
+// TODO before we try to seralize, try to inspect
+// https://rustwasm.github.io/wasm-bindgen/contributing/design/importing-js-struct.html
 impl Serialize for RtpParameters {
-    fn seralize<S>(&self, seralizer: S) -> Result<S::Ok, S::Error>
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: ser::Serializer,
     {
