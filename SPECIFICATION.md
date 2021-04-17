@@ -3,7 +3,6 @@ High-level overview of the combined product and technical requirements for the
 Cornish x Architect system.
 
 - [ ] SSO w/ Google (limited to @cornish.edu and @Meeshbhoombah)
-- [ ] Networked Thinking
 - [ ] Conversations
 - [ ] Rooms
 - [ ] Attributes
@@ -68,30 +67,6 @@ User {
     + On inital load 
 - [ ] Update user data
     + Settings System can update `display_name`, `theme`, etc.
-
-### graph
-Store access data in Postgres
-Image refs, accessible from S3
-
-Graph root = IPFS DAG
-
-```
-Block {
-    id
-    contents
-}
-```
-
-```
-Frame {
-    id
-    prev_frame_hash
-    created_at
-    name
-}
-```
-
-- [ ] Add a new block to a frame (default, #log)
 
 ### studio
 Postgres
